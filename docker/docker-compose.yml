@@ -16,7 +16,7 @@ services:
     networks:
       - dawarich
     volumes:
-      - /home/${USER}/Volumes/dawarich/shared:/data
+      - ${DATA_DIR}/shared:/data
     restart: always
     healthcheck:
       test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
